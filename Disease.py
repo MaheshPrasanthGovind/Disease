@@ -35,21 +35,51 @@ st.markdown("""
     }
     .risk-high {
         background-color: #ffebee;
-        border-left: 4px solid #f44336;
+        border-left: 4px solid #d32f2f;
         padding: 1rem;
         border-radius: 5px;
+        color: #b71c1c !important;
+        border: 1px solid #ffcdd2;
+    }
+    .risk-high h4 {
+        color: #b71c1c !important;
+        margin-top: 0;
+    }
+    .risk-high p {
+        color: #d32f2f !important;
+        margin-bottom: 0.5rem;
     }
     .risk-medium {
         background-color: #fff3e0;
-        border-left: 4px solid #ff9800;
+        border-left: 4px solid #f57c00;
         padding: 1rem;
         border-radius: 5px;
+        color: #e65100 !important;
+        border: 1px solid #ffcc02;
+    }
+    .risk-medium h4 {
+        color: #e65100 !important;
+        margin-top: 0;
+    }
+    .risk-medium p {
+        color: #f57c00 !important;
+        margin-bottom: 0.5rem;
     }
     .risk-low {
         background-color: #e8f5e8;
-        border-left: 4px solid #4caf50;
+        border-left: 4px solid #388e3c;
         padding: 1rem;
         border-radius: 5px;
+        color: #1b5e20 !important;
+        border: 1px solid #c8e6c9;
+    }
+    .risk-low h4 {
+        color: #1b5e20 !important;
+        margin-top: 0;
+    }
+    .risk-low p {
+        color: #2e7d32 !important;
+        margin-bottom: 0.5rem;
     }
     .ethics-box {
         background-color: #fff8e1;
