@@ -394,7 +394,7 @@ def main():
     with col2:
         # Analysis button and quick stats
         st.markdown('<div class="feature-box">', unsafe_allow_html=True)
-        st.subheader("📊 Quick Stats")
+        st.subheader("Quick Stats")
         
         symptom_data = load_symptom_disease_data()
         genetic_data = load_genetic_disease_data()
@@ -438,7 +438,7 @@ def main():
         results = st.session_state.analysis_results
         
         st.markdown("---")
-        st.header("📋 Analysis Results")
+        st.header("Analysis Results")
         
         # Create tabs for different result views
         tab1, tab2, tab3, tab4 = st.tabs(["🩺 Disease Predictions", "🧬 Genetic Risks", "📊 Visualizations", "📄 Full Report"])
