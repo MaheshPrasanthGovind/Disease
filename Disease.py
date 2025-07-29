@@ -365,6 +365,8 @@ def main():
                     user_symptoms = [s.strip().lower().replace(' ', '_') for s in manual_symptoms.split(',')]
             
             st.markdown('</div>', unsafe_allow_html=True)
+        else:
+            user_symptoms = []
         
         # Genetic Input Section
         if analysis_type in ["Comprehensive Analysis", "Genetic Analysis Only"]:
@@ -390,11 +392,13 @@ def main():
                 )
             
             st.markdown('</div>', unsafe_allow_html=True)
+        else:
+            genetic_input = ""
     
     with col2:
         # Analysis button and quick stats
         st.markdown('<div class="feature-box">', unsafe_allow_html=True)
-        st.subheader("Quick Stats")
+        st.subheader("📊 Quick Stats")
         
         symptom_data = load_symptom_disease_data()
         genetic_data = load_genetic_disease_data()
@@ -407,6 +411,12 @@ def main():
         
         # Analysis button
         if st.button("🔍 Run Analysis", type="primary", use_container_width=True):
+            # Initialize variables to avoid UnboundLocalError
+            if 'user_symptoms' not in locals():
+                user_symptoms = []
+            if 'genetic_input' not in locals():
+                genetic_input = ""
+                
             if (analysis_type == "Symptom Analysis Only" and not user_symptoms) or \
                (analysis_type == "Genetic Analysis Only" and not genetic_input) or \
                (analysis_type == "Comprehensive Analysis" and not user_symptoms and not genetic_input):
@@ -438,7 +448,7 @@ def main():
         results = st.session_state.analysis_results
         
         st.markdown("---")
-        st.header("Analysis Results")
+        st.header("📋 Analysis Results")
         
         # Create tabs for different result views
         tab1, tab2, tab3, tab4 = st.tabs(["🩺 Disease Predictions", "🧬 Genetic Risks", "📊 Visualizations", "📄 Full Report"])
