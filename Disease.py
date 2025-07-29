@@ -87,6 +87,31 @@ st.markdown("""
         padding: 1.5rem;
         border-radius: 10px;
         margin: 2rem 0;
+        color: #bf8800 !important;
+    }
+    .ethics-box h3 {
+        color: #b8860b !important;
+        margin-top: 0;
+    }
+    .ethics-box h4 {
+        color: #cc8400 !important;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    .ethics-box p {
+        color: #996600 !important;
+        margin-bottom: 1rem;
+    }
+    .ethics-box ul {
+        color: #996600 !important;
+    }
+    .ethics-box li {
+        color: #996600 !important;
+        margin-bottom: 0.5rem;
+    }
+    .ethics-box strong {
+        color: #804400 !important;
+        font-weight: bold;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -288,7 +313,7 @@ def main():
     st.markdown("""
     <div class="main-header">
         <h1>🧬 SymptoGen: Symptom & Genetic Disease Insight Tool</h1>
-        <p>AI-powered symptom analysis and genetic risk assessment</p>
+        <p>Advanced symptom analysis and genetic risk assessment</p>
     </div>
     """, unsafe_allow_html=True)
     
